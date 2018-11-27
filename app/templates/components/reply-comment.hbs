@@ -1,0 +1,14 @@
+<div class="reply-comment">
+  <div class="write-comment">
+    {{#link-to "details.index"}}
+      <div class="close icon-cross"></div>
+    {{/link-to}}
+    <div class="write">
+      {{input value=sendContent placeholder="Leave your comment here"}}
+    </div>
+  </div>
+  <div class="send-comment">
+    <span class="icon-send"></span>
+  </div>
+</div>
+{{yield}}

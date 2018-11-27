@@ -1,0 +1,23 @@
+{{#if model.isRenderParticipants}}
+  <ul class="event-list">
+    {{#each model.participants as |item|}}
+      {{#link-to "details" item.id}}
+        <li>
+          {{!-- user-info --}}
+          <div class="user-info">
+            <div class="user-logo">
+              <span class="logo">
+                <img src={{item.avatar}} alt={{item.salt}}>
+              </span>
+              <span class="username">{{item.username}}</span>
+            </div>
+            {{!-- <div class="channel-name">{{item.channel.name}}</div> --}}
+          </div>
+        </li>
+      {{/link-to}}
+    {{/each}}
+  </ul>
+{{else}}
+{{no-result}}
+{{/if}}
+{{outlet}}

@@ -1,0 +1,19 @@
+{{!-- app/templates/e-list.hbs --}}
+{{e-header avatar=model.avatar renderHeader=model.renderHeader}}
+<div class="event">
+  <ul class="event-list">
+    {{#each model.data as |item|}}
+      {{#link-to "details" item.id}}
+        <li>
+          {{event-list item=item}}
+        </li>
+      {{/link-to}}
+    {{/each}}
+  </ul>
+</div>
+<div class="search-template">
+  {{channel-choice channel=model.channel search=model.search fromDate=model.fromDate
+  toDate=model.toDate onClick=(action "doSelect")}}
+  {{channel-button showSelect=model.showSelect onClick=(action "doChoice")}}
+</div>
+{{outlet}}

@@ -1,0 +1,15 @@
+<div class="nav-link" id="nav-link">
+  {{#link-to "me.likes"}}
+    <i class="icon-like"></i>
+    <span>{{likes_count}} Likes</span>
+  {{/link-to}}
+  {{#link-to "me.going"}}
+    <i class="icon-check-outline"></i>
+    <span>{{goings_count}} Going</span>
+  {{/link-to}}
+  {{#link-to "me.past"}}
+    <i class="icon-past-outline"></i>
+    <span>{{past_count}} Past</span>
+  {{/link-to}}
+</div>
+{{yield}}

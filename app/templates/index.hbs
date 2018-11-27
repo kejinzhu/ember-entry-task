@@ -1,0 +1,43 @@
+{{!-- app/templates/index.hbs --}}
+<div class="e-login">
+  {{!-- logo start --}}
+  <div class="logo">
+    <h2 class="title">
+      <p>FIND THE MOST LOVED ACTIVITIES</p>
+      <strong>BLACK CAT</strong>
+    </h2>
+    <i class="icon icon-logo-cat"></i>
+  </div>
+  {{!-- logo end --}}
+
+  {{!-- form start --}}
+  <form class="form" role="form" {{action "doLogin" on="submit"}}>
+    {{input 
+      type="text" 
+      name="username" 
+      id="username" 
+      class="input" 
+      placeholder="Username"
+      value=username
+    }}
+    <i class="user-icon icon-user"></i>
+    {{input
+      type="password" 
+      name="password" 
+      id="password" 
+      class="input" 
+      placeholder="Password"
+      value=password
+    }}
+    <i class="pwd-icon icon-password"></i>
+    {{!-- button start --}}
+    <button type="submit" class="button">
+      <span>
+        {{e-button title=model.title}}
+      </span>
+    </button>
+    {{!-- button end --}}
+  </form>
+  {{!-- form end --}}
+</div>
+{{outlet}}

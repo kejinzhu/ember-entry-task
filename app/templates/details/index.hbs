@@ -1,0 +1,68 @@
+<div class="detail-index">
+  <div class="description">
+    {{slide-bar slideData=model.data.images}}
+    <div class="content">
+      <p id="description">{{model.data.description}}</p>
+      {{view-all}}
+    </div>
+  </div>
+  <div class="when">
+    <p>When</p>
+    <div class="date">
+      <div class="date-from">
+        <span class="time">
+          <i class="icon-date-from"></i>
+          <span>{{details null model.data.begin_time}}</span>
+        </span>
+        <span><strong>{{details null null model.data.begin_time}}</strong> {{details null null null model.data.begin_time}}</span>
+      </div>
+      <div class="date-to">
+        <span class="time">
+          <i class="icon-date-to"></i>
+          <span>{{details null model.data.end_time}}</span>
+        </span>
+        <span><strong>{{details null null model.data.begin_time}}</strong> {{details null null null model.data.begin_time}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="where">
+    <p>Where</p>
+    <div class="address">
+      <span>{{model.data.location}}</span>
+      <span>{{model.data.location_detail}}</span>
+    </div>
+    <div class="map">
+      <img src="/images/gmap.png" alt="">
+    </div>
+  </div>
+  <div class="index-go-like">
+    <div class="go">
+      <div class="icon">
+        <i class="icon-check-outline"></i>
+        <span>{{model.data.goings_count}} going</span>
+      </div>
+      <div class="comment-user">
+        {{comment-user data=model.participants}}
+        <div class="more"></div>
+      </div>
+    </div>
+    <div class="like">
+      <div class="icon">
+        <i class="icon-like-outline"></i>
+        <span>{{model.data.likes_count}} likes</span>
+      </div>
+      <div class="comment-user">
+        {{comment-user data=model.likes}}
+        <div class="more"></div>
+      </div>
+    </div>
+  </div>
+  <div class="detail-comment">
+    {{#if model.isRenderComments}}
+      {{comment-list data=model.comments}}
+    {{else}}
+      {{no-result}}
+    {{/if}}
+  </div>
+</div>
+{{outlet}}

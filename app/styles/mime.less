@@ -1,0 +1,301 @@
+@w:3.2rem;
+@h:5.68rem;
+.me{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: space-between;
+  position: relative;
+  top:0.4rem;
+  .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: @w;
+    height: 2.56rem;
+    padding-top: 0.12rem;
+    padding-bottom: 0.12rem;
+    .user-logo{
+      border:2px solid #8560A9;
+      width: 0.72rem;
+      height: 0.72rem;
+      margin-top:0.24rem;
+      margin-bottom: 0.24rem;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    }
+    .user-name{
+      width: 1.03rem;
+      height: 0.31rem;
+      font-size: 0.24rem;
+      text-align: center;
+      color: #67616D;
+    }
+    .email{
+      text-align: center;
+      width: 1.8rem;
+      height: 0.18rem;
+      color: #8560A9;
+      font-size: 0.14rem;
+      margin-top:0.08rem;
+      .icon{
+        display: inline-block;
+        width: 0.16rem;
+        height: 0.13rem;
+        font-size: 0.14rem;
+        color: #8560A9;
+      }
+    }
+    .nav-link{
+      width: 2.88rem;
+      margin-top:0.24rem;
+      padding-left: 0.16rem;
+      padding-right:0.16rem;
+      height: 0.47rem;
+      border-top: 1px solid #E8E8E8;
+      border-bottom: 1px solid #E8E8E8;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      a{
+        display: inline-block;
+        height: 0.16rem;
+        line-height: 0.16rem;
+        padding-right: 0.10rem;
+        font-size: 0.12rem;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #8C8C8C;
+        &:nth-child(1){
+          border-right: 1px solid #8C8C8C;
+          color: #AECB4F;
+        }
+        &:nth-child(2){
+          border-right: 1px solid #8C8C8C;
+        }
+        i{
+          display: inline-block;
+          width: 0.167rem;
+          height: 0.167rem;
+          // color: #8C8C8C;
+          font-size: 0.16rem;
+          margin-right: 0.05rem;
+        }
+      }
+    }
+  }
+  .event-list{
+    width: 3.04rem;
+    padding-left: 0.16rem;
+    list-style: none;
+    a{
+      text-decoration: none;
+    }
+    li{ 
+      width: 100%;
+      padding-top:0.16rem;
+      padding-right: 0.16rem;
+      box-sizing: border-box;
+      position: relative;
+      border-bottom: 1px solid #D3C1E5;
+      // overflow: hidden;
+      .user-info{
+        width: 100%;
+        height: 0.22rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .user-logo{
+          height: 0.22rem;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          span{
+            position: relative;
+            display: inline-block;
+            &.logo{
+              width: 0.2rem;
+              height: 0.2rem;
+              border-radius: 50%;
+              img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                vertical-align: center;
+                border-radius: 50%;
+              }
+            }
+            &.username{
+              margin-left:0.08rem;
+              font-size: 0.12rem;
+              color: #67616D;
+            }
+          }
+        }
+        .channel-name{
+          height: 0.15rem;
+          line-height: 0.15rem;
+          border:1px solid #D3C1E5;
+          border-radius: 0.10rem;
+          color: #8560A9;
+          font-size: 0.12rem;
+          text-align: center;
+          padding:0.02rem 0.06rem 0.03rem 0.10rem;
+        }
+      }
+      .title{
+        width: 100%;
+        margin-top:0.05rem;
+        height: 0.69rem;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        // justify-content: space-between;
+        .name-time{
+          // float: left;
+          width: 2.46rem;
+          overflow: hidden;
+          .name{
+            height: 0.46rem;
+            line-height: 0.22rem;
+            text-align: left;
+            font-size: 0.16rem;
+            color: #453257;
+            text-overflow: ellipsis;
+            position: relative;
+            display:-webkit-box;//对象作为弹性伸缩盒子模型显示 
+            -webkit-box-orient: vertical;//设置或检索伸缩盒对象的子元素的排列方式 
+            -webkit-line-clamp: 1;//溢出省略的界限
+            overflow:hidden;
+            strong{
+              position: absolute;
+              left:0;
+            }
+          }
+          .time{
+            height: 0.15rem;
+            margin-top:0.08rem;
+            position: relative;
+            span{
+              font-size: 0.12rem;
+              display: inline-block;
+              &.icon-time{
+                width:0.12rem;
+                height:0.12rem;
+                color: #8560A9;
+                position: absolute;
+              }
+              &.be-time{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                color: #8560A9;
+                position: absolute;
+                width: 2.3rem;
+                left:0.17rem;
+              }
+            }
+          }
+        }
+        .image{
+          // float: right;
+          margin-top:0.08rem;
+          width: 0.58rem;
+          height: 0.58rem;
+          position: relative;
+          img{
+            width: 100%;
+            height: 100%;
+            vertical-align: center;
+            position: absolute;
+            border:none;
+          }
+        }
+      }
+      .description{
+        width: 2.88rem;
+        height: 0.54rem;
+        display:-webkit-box;//对象作为弹性伸缩盒子模型显示 
+        -webkit-box-orient: vertical;//设置或检索伸缩盒对象的子元素的排列方式 
+        -webkit-line-clamp: 1;//溢出省略的界限
+        overflow:hidden;
+        text-overflow: ellipsis;
+        font-size: 0.14rem;
+        color: #67616D;
+        margin-top: 0.12rem;
+        margin-bottom: 0.12rem;
+      }
+      .like-go{
+        width: 1.96rem;
+        height: 0.15rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.18rem;
+        .go,.like{
+          display: inline-block;
+          font-size:0.12rem;
+          margin-right: 0.12rem;
+          .icon{
+            width: 0.12rem;
+            height: 0.12rem;
+            margin-right: 0.05rem;
+          }
+          .txt{
+            height: 0.15rem;
+            color: #AC8EC9;
+          }
+          .green{
+            color: #AECB4F
+          }
+          .red{
+            color: #FF5C5C;
+          }
+          .purple{
+            color: #AC8EC9;
+          }
+        }
+      }
+    }
+  }
+  .no-result{
+    width: @w;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo{
+      margin-top: 0.78rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      color: #D3C1E5;
+      font-size: 0.60rem;
+    }
+    .content{
+      text-align: center;
+      margin-top: 0.11rem;
+      width: 1.66rem;
+      height: 0.18rem;
+      color: #BABABA;
+      font-size: 0.14rem;
+    }
+  }
+}

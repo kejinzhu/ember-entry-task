@@ -1,0 +1,34 @@
+{{!-- app/templates/e-mime.hbs --}}
+{{e-header avatar=model.avatar renderHeader=model.renderHeader}}
+<div class="me">
+  <div class="user">
+    <div class="user-logo">
+      <img src={{model.avatar}} alt="">
+    </div>
+    <div class="user-name">{{model.username}}</div>
+    <div class="email">
+      <span class="icon icon-email"></span>
+      <span>{{model.email}}</span>
+    </div>
+    {{user-nav goings_count=model.goings_count likes_count=model.likes_count past_count=model.past_count}}
+  </div>
+  <div class="content">
+    {{#if model.type}}
+      {{#if model.isRenderLike}}
+      <ul class="event-list">
+        {{#each model.liked as |item|}}
+          {{#link-to "details" item.id}}
+            <li>
+              {{event-list item=item}}
+            </li>
+          {{/link-to}}
+        {{/each}}
+      </ul>
+      {{else}}
+      {{no-result}}
+      {{/if}}
+    {{else}}
+    {{outlet}}
+    {{/if}}
+  </div>
+</div>

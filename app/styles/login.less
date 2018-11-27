@@ -1,0 +1,158 @@
+@w:3.2rem;
+@h:5.68rem;
+.e-login{
+  width: @w;
+  height: @h;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  left:0;
+  top:0;
+  background: url("/images/Street-Dance-01.jpg") no-repeat fixed rgba(133,96,169,0.95);
+  background-position: 40% 0;
+  background-size: 5.38rem 5.72rem;
+  transition: all 0.3s ease 0s;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    background:#8560A9;
+    opacity: 0.7;
+  }
+  .logo{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:3rem;
+    height:3rem;
+    position: absolute;
+    left:0.1rem;
+    top:-0.64rem;
+    z-index: 10;
+    .icon{
+      display: block;
+      height: 0.60rem;
+      width: 0.60rem;
+      padding-top:0.04rem;
+      padding-left:0.04rem;
+      // background: #fff;
+      border-radius: 50%;
+      border:1px solid #D5EF7F;
+      position: absolute;
+      left:1.18rem;
+      top:2.35rem;
+      color: #D5EF7F;
+      font-size:0.50rem;
+      &:after{
+        content: "";
+        width:0.68rem;
+        height:0.68rem;
+        position: absolute;
+        left:-0.03rem;
+        top:-0.03rem;
+        border: 1px solid #D5EF7F;
+        opacity: 0.3;
+        display: block;
+        border-radius: 50%;
+      }
+    }
+    .title{
+      margin-top: 15px;
+      color:#D5EF7F;
+      text-align: center;
+      font-weight: normal;
+      position: absolute;
+      top:1.33rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      p{
+        height:0.2rem;
+        font-size: 0.16rem;
+      }
+      strong{
+        font-size: 0.24rem;
+        height:0.31rem;
+        margin-top:0.16rem;
+      }
+    }
+  }
+  .form{
+    width: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: self-start;
+    position: absolute;
+    left:0.4rem;
+    top:3.35rem;
+    .input{
+      border: 1px solid #D3C1E5;
+      background: none;
+      // background: rgba(255,255,255,0.2);
+      outline: none;
+      height:0.4rem;
+      display: block;
+      text-align: left;
+      font-size:0.16rem;
+      color: #453257;
+      text-indent: 0.34rem;
+      border-radius: 0.2rem;
+      width: 100%;
+      margin-top:0.16rem;
+      &::-webkit-input-placeholder{
+        color: #AC8EC9;
+      }
+      &::-moz-placeholder{
+        color: #AC8EC9;
+      }
+      &:focus{
+        background: rgba(255,255,255,0.2);
+      }
+    }
+    i{
+      width:0.133rem;
+      height:0.133rem;
+      display: block;
+      color: #D3C1E5;
+      position: absolute;
+      font-size:0.16rem;
+      &.user-icon{
+        left:0.133rem;
+        top:0.29rem;
+      }
+      &.pwd-icon{
+        left:0.133rem;
+        top:0.89rem;
+      }
+    }
+    .button{
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height:0.64rem;
+      border: none;
+      outline: none;
+      background: #D5EF7F;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      span{
+        // width: 0.53rem;
+        height: 0.229rem;
+        font-size: 0.16rem;
+        color: #453257;
+        text-align: center;
+      }
+    }
+  }
+}

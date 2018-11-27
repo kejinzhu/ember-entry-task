@@ -1,0 +1,38 @@
+<div class="search-channel">
+  <div class="date">
+    <div class="channel-title">
+      <span>DATE</span>
+    </div>
+    <div class="channel-content">
+      <div class="date-container">
+        <div class="choice-list">
+          {{#each search as |item|}}
+          <span class="date-choice">{{item}}</span>
+          {{/each}}
+        </div>
+        <div class="input" id="inp">
+          <span class="from">
+            <i class="icon-date-from"></i>
+            {{pikaday-input value=fromDate format="MM/DD/YYYY" onSelection=(action 'doSomethingWithSelectedValue')}}
+          </span>
+          <span class="underline">-</span>
+          <span class="to">
+            <i class="icon-date-to"></i>
+            {{pikaday-input value=toDate format="MM/DD/YYYY" onSelection=(action 'doSomethingWithSelectedValue')}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="channel">
+    <div class="channel-title">
+      <span>CHANNEL</span>
+    </div>
+    <div class="channel-content">
+      {{#each channel as |item|}}
+        <span class="channel-choice" action="click">{{item}}</span>
+      {{/each}}
+    </div>
+  </div>
+</div>
+{{yield}}

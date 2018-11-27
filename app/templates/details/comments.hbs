@@ -1,0 +1,9 @@
+{{#if model.isRenderComments}}
+  <div class="detail-comment">
+    {{comment-list data=model.comments}}
+    {{reply-comment}}
+  </div>
+{{else}}
+  {{no-result}}
+{{/if}}
+{{outlet}}

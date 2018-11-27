@@ -1,0 +1,7 @@
+{
+  "name": "entry-task",
+  "dependencies": {
+    "pikaday": "^1.8.0",
+    "moment": "^2.22.2"
+  }
+}

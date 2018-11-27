@@ -1,0 +1,14 @@
+{{#if model.isRenderGoing}}
+  <ul class="event-list">
+    {{#each model.going as |item|}}
+      {{#link-to "details" item.id}}
+        <li>
+          {{event-list item=item}}
+        </li>
+      {{/link-to}}
+    {{/each}}
+  </ul>
+{{else}}
+{{no-result}}
+{{/if}}
+{{outlet}}

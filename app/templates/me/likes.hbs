@@ -1,0 +1,14 @@
+{{#if model.isRenderLike}}
+  <ul class="event-list">
+    {{#each model.liked as |item|}}
+      {{#link-to "details" item.id}}
+        <li>
+          {{event-list item=item}}
+        </li>
+      {{/link-to}}
+    {{/each}}
+  </ul>
+{{else}}
+{{no-result}}
+{{/if}}
+{{outlet}}

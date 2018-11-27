@@ -1,0 +1,20 @@
+{{#each data as |item|}}
+  <div class="container">
+    <div class="left">
+      <img src={{item.user.avatar}} alt="">
+    </div>
+    <div class="right">
+      <p class="user">
+        <div class="user-info">
+          <span class="user-name">{{item.user.username}}</span>
+          <span class="comment-time">{{details item.create_time}}</span>
+        </div>
+        <div class="reply">
+          <span class="icon-reply"></span>
+        </div>
+      </p>
+      <p class="content">{{item.comment}}</p>
+    </div>
+  </div>
+{{/each}}
+{{yield}}

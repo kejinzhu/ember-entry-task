@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>entry-task</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    {{content-for "head"}}
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <link rel="shortcut icon" href="http://localhost:4200/ember-welcome-page/images/construction.png" type="image/x-icon">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/entry-task.css">
+    <script>
+      function adaptWidth(){
+        var html = document.documentElement||document.body;
+        var winW = document.documentElement.clientWidth||document.body.clientWidth;
+        html.style.fontSize = winW / 320 * 100+"px";
+      }
+      adaptWidth();
+      window.addEventListener('resize',adaptWidth);
+    </script>
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/entry-task.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

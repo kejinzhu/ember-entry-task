@@ -1,0 +1,10 @@
+<header>
+  {{#if renderHeader}}
+    {{e-search onClick=(action "doSearch")}}
+  {{else}}
+    {{e-home}}
+  {{/if}}
+  <i class="icon-logo-cat"></i>
+  {{e-me avatar=avatar}}
+</header>
+{{yield}}

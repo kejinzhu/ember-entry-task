@@ -1,0 +1,63 @@
+@import "./reset.less";
+@import "./style.less";
+@import "./login.less";
+@import "./event.less";
+@import "./details.less";
+@import "./mime.less";
+.html{
+  font-size:100px;
+}
+header{
+  width: 2.9rem;
+  height: 0.4rem;
+  background: #8560A9;
+  padding-left:0.16rem;
+  padding-right: 0.14rem;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  i{
+    display: inline-block;
+    &.icon-search{
+      position: absolute;
+      top:0.1rem;
+      width: 0.18rem;
+      height: 0.18rem;
+      font-size: 0.20rem;
+      color: #453257;
+    }
+    &.icon-home{
+      position: absolute;
+      top:0.1rem;
+      width: 0.18rem;
+      height: 0.18rem;
+      color: #453257;
+      font-size: 0.20rem;
+    }
+    &.icon-logo-cat{
+      width: 0.209rem;
+      height: 0.24rem;
+      color: #D5EF7F;
+      font-size: 0.20rem;
+    }
+    &.user-avatar{
+      position: absolute;
+      top:-0.25rem;
+      width: 0.24rem;
+      height: 0.24rem;
+      border-radius: 50%;
+      box-sizing: border-box;
+      position: relative;
+      img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        vertical-align: center;
+        border-radius: 50%;
+      }
+    }
+  }
+}

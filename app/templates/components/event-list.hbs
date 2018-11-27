@@ -1,0 +1,39 @@
+{{!-- user-info --}}
+<div class="user-info">
+  <div class="user-logo">
+    <span class="logo">
+      <img src={{item.creator.avatar}} alt={{item.creator.salt}}>
+    </span>
+    <span class="username">{{item.creator.username}}</span>
+  </div>
+  <div class="channel-name">{{item.channel.name}}</div>
+</div>
+{{!-- title --}}
+<div class="title">
+  <div class="name-time">
+    <div class="name">
+      <strong>{{item.name}}</strong>
+    </div>
+    <div class="time">
+      <span class="icon-time"></span>
+      <span class="be-time">
+        <span>{{event item.begin_time}}</span>
+        <b>-</b>
+        <span>{{event item.end_time}}</span>
+      </span>
+    </div>
+  </div>
+  <div class="image">
+    {{event null item.images}}
+  </div>
+</div>
+{{!-- description --}}
+<div class="description">
+{{item.description}}
+</div>
+{{!-- like-go --}}
+<div class="like-go">
+{{!-- {{item.me_going}}{{item.me_likes}} --}}
+  {{event null null item.goings_count item.likes_count item.me_going item.me_likes}}
+</div>
+{{yield}}
